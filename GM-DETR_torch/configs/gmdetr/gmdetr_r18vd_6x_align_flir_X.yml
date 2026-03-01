@@ -1,6 +1,6 @@
 
 __include__: [
-  '../dataset/align_flir_X_ir_detection.yml',
+  '../dataset/coco_detection.yml',
   '../runtime.yml',
   './include/dataloader_X.yml',
   './include/optimizer.yml',
