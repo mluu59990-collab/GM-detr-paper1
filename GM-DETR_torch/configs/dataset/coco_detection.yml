@@ -1,0 +1,34 @@
+task: detection
+
+num_classes: 1
+remap_mscoco_category: True
+
+train_dataloader: 
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/test/img
+    ann_file: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/train/instances_train.json
+    transforms:
+      type: Compose
+      ops: ~
+  shuffle: True
+  batch_size: 8
+  num_workers: 4
+  drop_last: True 
+
+
+val_dataloader:
+  type: DataLoader
+  dataset: 
+    type: CocoDetection
+    img_folder: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/valid/img
+    ann_file: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/valid/instances_val.json
+    transforms:
+      type: Compose
+      ops: ~ 
+
+  shuffle: False
+  batch_size: 8
+  num_workers: 4
+  drop_last: False
