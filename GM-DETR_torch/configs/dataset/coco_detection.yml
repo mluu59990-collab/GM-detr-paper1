@@ -7,7 +7,7 @@ train_dataloader:
   type: DataLoader
   dataset: 
     type: CocoDetection
-    img_folder: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/test/img
+    img_folder: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/train/img
     ann_file: /kaggle/input/datasets/minhluu0102/dtsblurpaper1/dataset_blur_coco/train/instances_train.json
     transforms:
       type: Compose
